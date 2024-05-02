@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Distributed;
 using UsersAPI.Data;
+using UsersAPI.DTO;
 using UsersAPI.Model;
 
 namespace UsersAPI.Controllers
@@ -34,18 +35,6 @@ namespace UsersAPI.Controllers
             return user;
         }
 
-        [HttpPost]
-        public ActionResult<User> CreateUser(User user)
-        {
-            if (user == null)
-            {
-                return BadRequest();
-            }
-            _context.Users.Add(user);
-            _context.SaveChanges();
-            return Ok();
-        }
-
         [HttpDelete("{id}")]
         public ActionResult DeleteUser(Guid id)
         {
@@ -74,6 +63,44 @@ namespace UsersAPI.Controllers
 
             _context.SaveChanges();
             return NoContent();
+        }
+
+        [HttpPost("/signup")]
+        public ActionResult<User> UserSignUp(User user)
+        {
+            if (user == null)
+            {
+                return BadRequest();
+            }
+
+            user.Password = Utils.Utils.HashPassword(user.Password);
+
+            _context.Users.Add(user);
+            _context.SaveChanges();
+            return Ok();
+        }
+
+        [HttpPost("/login")]
+        public ActionResult<User> UserLogIn(LoginDTO loginDTO)
+        {
+            if (loginDTO == null)
+            {
+                return BadRequest();
+            }
+
+            var user = _context.Users.FirstOrDefault(u => u.Userame.Equals(loginDTO.UserName));
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            var loginPassword = Utils.Utils.HashPassword(loginDTO.Password);
+
+            if (loginPassword.Equals(user.Password))
+            {
+                return Ok();
+            }
+            return BadRequest();
         }
     }
 }
