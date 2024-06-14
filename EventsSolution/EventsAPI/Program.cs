@@ -14,6 +14,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors();
+
 // Register MongoDB Connection
 builder.Services.AddScoped<IMongoDbConnection, MongoDbConnection>();
 
@@ -27,6 +29,8 @@ builder.Services.AddHealthChecks()
 // Register Health Checks UI
 builder.Services.AddHealthChecksUI()
     .AddInMemoryStorage(); // Add in-memory storage for health check results
+
+builder.Services.AddScoped<IEventsRepository, EventsRepository>();
 
 var app = builder.Build();
 
@@ -42,6 +46,12 @@ app.UseHttpsRedirection();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseCors(x => x
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .SetIsOriginAllowed(origin => true) // allow any origin
+    .AllowCredentials()); // allow credentials
 
 app.UseHealthChecks("/health", new HealthCheckOptions
 {

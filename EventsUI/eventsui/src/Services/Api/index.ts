@@ -1,9 +1,12 @@
 import axios from 'axios'
 
-export const api = axios.create({
-  baseURL: 'https://localhost:7174/',
+const api = axios.create({
+  baseURL: 'https://localhost:7174/api',
   headers: {
     'Content-Type': 'application/json',
-    Accept: '*/*'
+    Accept: '*/*',
+    'Access-Control-Allow-Origin': '*'
   }
 })
+
+export default api

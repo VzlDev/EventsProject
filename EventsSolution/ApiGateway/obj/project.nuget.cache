@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lsJCyKqfnr+yMf2fCzFo76xNrogXL42WceJGbU4ajkMRNSEP0IDBwyBlLUuVDy+9ndF9TT3QGYtlHhqqsb9qQw==",
+  "dgSpecHash": "Hr78eYkT3KSmWW6nH5+ULJmVApX7GXCmPdr0wXGAnkR1QgQfGhsXxvFDc1zu3oR3YcooNIg362qcicxAiX7t9Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\e1154\\Documents\\_Pessoal\\GitHub\\Events\\EventsProject\\EventsSolution\\ApiGateway\\ApiGateway.csproj",
+  "projectFilePath": "C:\\Users\\e1154\\Documents\\Formacao\\EventsProject\\EventsSolution\\ApiGateway\\ApiGateway.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\e1154\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
     "C:\\Users\\e1154\\.nuget\\packages\\ipaddressrange\\6.0.0\\ipaddressrange.6.0.0.nupkg.sha512",

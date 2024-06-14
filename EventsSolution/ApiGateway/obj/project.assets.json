@@ -714,21 +714,19 @@
   },
   "packageFolders": {
     "C:\\Users\\e1154\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\e1154\\Documents\\_Pessoal\\GitHub\\Events\\EventsProject\\EventsSolution\\ApiGateway\\ApiGateway.csproj",
+      "projectUniqueName": "C:\\Users\\e1154\\Documents\\Formacao\\EventsProject\\EventsSolution\\ApiGateway\\ApiGateway.csproj",
       "projectName": "ApiGateway",
-      "projectPath": "C:\\Users\\e1154\\Documents\\_Pessoal\\GitHub\\Events\\EventsProject\\EventsSolution\\ApiGateway\\ApiGateway.csproj",
+      "projectPath": "C:\\Users\\e1154\\Documents\\Formacao\\EventsProject\\EventsSolution\\ApiGateway\\ApiGateway.csproj",
       "packagesPath": "C:\\Users\\e1154\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\e1154\\Documents\\_Pessoal\\GitHub\\Events\\EventsProject\\EventsSolution\\ApiGateway\\obj\\",
+      "outputPath": "C:\\Users\\e1154\\Documents\\Formacao\\EventsProject\\EventsSolution\\ApiGateway\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\e1154\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -739,6 +737,7 @@
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -752,6 +751,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -786,7 +790,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   }

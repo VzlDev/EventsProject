@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using EventsAPI.Data;
 using EventsAPI.Model;
+using EventsAPI.DTO;
 
 namespace EventsAPI.Controllers
 {
@@ -32,12 +33,14 @@ namespace EventsAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<bool>> CreateEvent(Event evento)
+        public async Task<ActionResult<bool>> CreateEvent(EventDTO eventDTO)
         {
-            if (evento == null)
+            if (eventDTO == null)
             {
                 return BadRequest();
             }
+
+            Event evento = new Event(eventDTO);
             
             return await _repository.CreateEvent(evento);
         }
@@ -55,36 +58,6 @@ namespace EventsAPI.Controllers
             {
                 return NotFound();
             }
-
-            return await _repository.UpdateEvent(evento);
-        }
-
-        [HttpPut("{eventId}/users/add/{userId}")]
-        public async Task<ActionResult<bool>> AddUserToEvent(Guid userId, Guid eventId)
-        {
-            Event evento = await _repository.GetEventById(eventId);
-
-            if (evento == null)
-            {
-                return NotFound();
-            }
-
-            evento.Users.Add(userId);
-
-            return await _repository.UpdateEvent(evento);
-        }
-
-        [HttpPut("{eventId}/users/remove/{userId}")]
-        public async Task<ActionResult<bool>> RemoveUserToEvent(Guid userId, Guid eventId)
-        {
-            Event evento = await _repository.GetEventById(eventId);
-
-            if (evento == null)
-            {
-                return NotFound();
-            }
-
-            evento.Users.Remove(userId);
 
             return await _repository.UpdateEvent(evento);
         }

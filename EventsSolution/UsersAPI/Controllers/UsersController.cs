@@ -58,29 +58,29 @@ namespace UsersAPI.Controllers
             }
 
             existingUser.Email = user.Email;
-            existingUser.Userame = user.Userame;
+            existingUser.Username = user.Username;
             existingUser.FullName = user.FullName;
 
             _context.SaveChanges();
             return NoContent();
         }
 
-        [HttpPost("/signup")]
-        public ActionResult<User> UserSignUp(User user)
+        [HttpPost("signup")]
+        public ActionResult<User> UserSignUp(UserDTO userDTO)
         {
-            if (user == null)
+            if (userDTO == null)
             {
                 return BadRequest();
             }
 
-            user.Password = Utils.Utils.HashPassword(user.Password);
+            User user = new User(userDTO);
 
             _context.Users.Add(user);
             _context.SaveChanges();
             return Ok();
         }
 
-        [HttpPost("/login")]
+        [HttpPost("login")]
         public ActionResult<User> UserLogIn(LoginDTO loginDTO)
         {
             if (loginDTO == null)
@@ -88,7 +88,7 @@ namespace UsersAPI.Controllers
                 return BadRequest();
             }
 
-            var user = _context.Users.FirstOrDefault(u => u.Userame.Equals(loginDTO.UserName));
+            var user = _context.Users.FirstOrDefault(u => u.Username.Equals(loginDTO.UserName));
             if (user == null)
             {
                 return NotFound();

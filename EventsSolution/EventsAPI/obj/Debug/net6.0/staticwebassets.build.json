@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "ng/AxjKZsl9lCtse7rDgHeZNWYJvXAtGIZD/2Y2MKPk=",
+  "Hash": "n8HkDK3bNAwxoIZQVgs0dtqt2yKcypfPu5vEKpVlkiY=",
   "Source": "EventsAPI",
   "BasePath": "_content/EventsAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Users\\e1154\\Documents\\_Pessoal\\GitHub\\Events\\EventsProject\\EventsSolution\\UsersAPI\\UsersAPI.csproj",
+      "Identity": "C:\\Users\\e1154\\Documents\\Formacao\\EventsProject\\EventsSolution\\UsersAPI\\UsersAPI.csproj",
       "Version": 2,
       "Source": "UsersAPI",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",

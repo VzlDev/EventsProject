@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rQygUe9/rtR7REpffMMCUs7G4W10C6/YSNR3hOk2mkGL9hCylIaq6qsL5bLPN1/5VzXEAdVzAZx6Fm8nYpkhIA==",
+  "dgSpecHash": "xeoh3lDhumfClF5yBnfidnU6OVuegOSfsO5R1KKm/nqtJJRWfIYUF9eO4DCi0nCS0kzH2IXMjp/2cNvVOIK16w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\e1154\\Documents\\_Pessoal\\GitHub\\Events\\EventsProject\\EventsSolution\\UsersAPI\\UsersAPI.csproj",
+  "projectFilePath": "C:\\Users\\e1154\\Documents\\Formacao\\EventsProject\\EventsSolution\\UsersAPI\\UsersAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\e1154\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\e1154\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
