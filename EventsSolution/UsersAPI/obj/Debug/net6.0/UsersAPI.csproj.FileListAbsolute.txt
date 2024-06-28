@@ -129,3 +129,5 @@ C:\Users\e1154\Documents\Formacao\EventsProject\EventsSolution\UsersAPI\obj\Debu
 C:\Users\e1154\Documents\Formacao\EventsProject\EventsSolution\UsersAPI\obj\Debug\net6.0\UsersAPI.pdb
 C:\Users\e1154\Documents\Formacao\EventsProject\EventsSolution\UsersAPI\obj\Debug\net6.0\UsersAPI.genruntimeconfig.cache
 C:\Users\e1154\Documents\Formacao\EventsProject\EventsSolution\UsersAPI\obj\Debug\net6.0\ref\UsersAPI.dll
+C:\Users\e1154\Documents\Formacao\EventsProject\EventsSolution\UsersAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\e1154\Documents\Formacao\EventsProject\EventsSolution\UsersAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll

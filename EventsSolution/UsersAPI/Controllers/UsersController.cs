@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Distributed;
 using UsersAPI.Data;
@@ -7,6 +8,7 @@ using UsersAPI.Model;
 
 namespace UsersAPI.Controllers
 {
+    [Authorize]
     [Route("[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
